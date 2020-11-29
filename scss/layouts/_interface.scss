@@ -1,0 +1,7 @@
+.interface {
+    border-left: 3px solid rgba(24, 4, 4, 0.411);
+    width: 30%;
+    height: 100%;
+    @include flex();
+    flex-direction: column;
+}

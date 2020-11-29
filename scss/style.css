@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: aqua;
+}
+
+.game-area {
+  width: 70%;
+  height: 100%;
+  background-color: #e5ebe9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.interface {
+  border-left: 3px solid rgba(24, 4, 4, 0.411);
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.keyboard {
+  width: 90%;
+  border: 10px solid #cab16d;
+  background-color: #cab16d;
+}
+
+.keyboard-screen {
+  height: 200px;
+  -webkit-box-shadow: inset 0 0 5px 1px;
+          box-shadow: inset 0 0 5px 1px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  border-bottom: 5px solid  #a7a4a4;
+}
+
+.keyboard-screen__display {
+  width: 80%;
+  font-size: 65px;
+  text-align: center;
+  background-color: inherit;
+}
+
+.keyboard-buttons {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+.keyboard-buttons__button {
+  border: 1px solid #a7a4a4;
+  font-size: 20px;
+  padding: 30px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.keyboard-buttons__button--long {
+  grid-row: span 2;
+}
+
+.keyboard-buttons__button--wide {
+  grid-column: span 2;
+}
+
+.keyboard-buttons__button:hover {
+  background-color: rgba(11, 247, 247, 0.476);
+}
+
+.keyboard-buttons__button:active {
+  background-color: #00000078;
+  color: #fff;
+}
+
+.score {
+  border: 1px solid red;
+  width: 200px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-image: url("/assets/image/score.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.score__value {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bolder;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.score__value--increase {
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+  color: #f8db00;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.score__value--decrease {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  color: blue;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.water {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(124, 226, 192, 0.699);
+  position: absolute;
+  left: 0;
+}
+
+.drop {
+  width: 70px;
+  height: 70px;
+  background-color: #00e1ff6c;
+  border-radius: 50%;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  border: 3px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.drop__value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.drop__operation {
+  position: absolute;
+  font-size: 30px;
+  top: 15px;
+  left: 10px;
+}
+
+@media (max-width: 720px) {
+  .game-area {
+    width: 50%;
+  }
+  .interface {
+    width: 50%;
+    background-color: lawngreen;
+  }
+  .keyboard {
+    width: 100%;
+  }
+  .keyboard-buttons__button {
+    padding: 20px 10px;
+  }
+  .score {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .keyboard-buttons__button {
+    padding: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
