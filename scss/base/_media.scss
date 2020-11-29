@@ -1,0 +1,25 @@
+@media(max-width: 720px) {
+    .game-area {
+        width: 50%;
+    }
+    .interface {
+        width: 50%;
+       background-color: lawngreen;
+    }
+    .keyboard {
+        width: 100%;
+        &-buttons {
+            &__button {
+                padding: 20px 10px;
+            }
+        }
+    }
+    .score{
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .keyboard-buttons__button {
+        padding:15px;
+    }
+}

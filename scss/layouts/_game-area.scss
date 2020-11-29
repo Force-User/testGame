@@ -1,0 +1,7 @@
+.game-area {
+    width: 70%;
+    height: 100%;
+    background-color: #e5ebe9;
+    @include flex(flex-end);
+    position: relative;
+}
